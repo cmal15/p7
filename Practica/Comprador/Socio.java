@@ -17,7 +17,7 @@ public class Socio extends Comprador{
         nombre = sc.nextLine();
         System.out.print("Introduzca apellido: ");
         apellido = sc.nextLine();
-        System.out.print("Introduzca cual es el nivel codigo de convenio: ");
+        System.out.print("Introduzca cual es el codigo de convenio: ");
         codigoDeConvenio = sc.nextLine();
         return new Socio(nombre,apellido,numeroDeCuenta,codigoDeConvenio);
     }
