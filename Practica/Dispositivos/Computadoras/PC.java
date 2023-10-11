@@ -1,11 +1,15 @@
 package Dispositivos.Computadoras;
 
+import java.util.Scanner;
+
 public class PC extends Computadora{
-      protected boolean correFriFayer;
+        protected boolean correFriFayer;
+        
     public PC(String modelo, String marca, boolean correFriFayer){
         super(modelo,marca);
         this.correFriFayer=correFriFayer;
-    }
+    }   
+    
     protected static PC nuevo(Scanner sc){
         String modelo;
         String marca;
@@ -18,12 +22,15 @@ public class PC extends Computadora{
         correFriFayer = sc.nextBoolean();
         return new PC(modelo,marca,correFriFayer);
     }
+    
     protected void setcorreFriFayer(boolean correFriFayer){
         this.correFriFayer=correFriFayer;
     }
+    
     protected boolean getCorreFriFayer(){
         return correFriFayer;
     }
+    
     protected String getClassName(){
         return "PC";
     }

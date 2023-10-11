@@ -1,12 +1,14 @@
 package Dispositivos.Computadoras;
 
 import Dispositivos.DispositivosElectronicos.DispositivoElectronico;
+import java.util.Scanner;
 
 public class Computadora extends DispositivoElectronico{   
     protected String modelo;
     protected String marca;
 
-    protected Computadora(String modelo, String marca){
+    protected Computadora(int año, double precio, String modelo, String marca){
+        super(año, precio);
         this.modelo = modelo;
         this.marca = marca;
     }
