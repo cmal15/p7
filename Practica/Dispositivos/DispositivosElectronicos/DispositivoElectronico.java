@@ -1,5 +1,7 @@
 package Dispositivos.DispositivosElectronicos;
 
+import java.util.Scanner;
+
 public class DispositivoElectronico{
 
     private int año;
@@ -10,6 +12,17 @@ public class DispositivoElectronico{
         this.precio = precio;
     }
 
+    protected static DispositivoElectronico nuevo(Scanner sc){
+        int año;
+        double precio;
+        System.out.println("Introduzca el año del dispositivo");
+        año = sc.nextInt();
+        System.out.println("Introduce el precio del producto");
+        precio = sc.nextDouble();
+        sc.nextLine();
+        return new DispositivoElectronico(año, precio);
+    }
+
     public void setPrecio(double precio){
         this.precio = precio;
     }
@@ -18,11 +31,11 @@ public class DispositivoElectronico{
         this.año = año;
     }
 
-    protected double getPrecio(){
+    public double getPrecio(){
         return precio;
     }
 
-    protected int getAño(){
+    public int getAño(){
         return año;
     }
 

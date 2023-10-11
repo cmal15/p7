@@ -16,12 +16,12 @@ public class Computadora extends DispositivoElectronico{
     protected static Computadora nuevo(Scanner sc){
         String modelo;
         String marca;
-        float precio;
+        DispositivoElectronico aux = DispositivoElectronico.nuevo(sc);
         System.out.print("Introduzca el modelo: ");
         modelo = sc.nextLine();
         System.out.print("Introduzca la marca: ");
         marca = sc.nextLine();
-        return new Computadora(modelo,marca);
+        return new Computadora(aux.getAño(), aux.getPrecio(), modelo, marca);
     }
 
     protected String getModelo(){
@@ -33,7 +33,7 @@ public class Computadora extends DispositivoElectronico{
     protected void setModelo(String modelo){
         this.modelo = modelo;
     }
-    protected void setMarca(String modelo){
+    protected void setMarca(String marca){
         this.marca = marca;
     }
     protected String getClassName(){

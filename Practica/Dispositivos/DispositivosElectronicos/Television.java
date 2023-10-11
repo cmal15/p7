@@ -1,5 +1,7 @@
 package Dispositivos.DispositivosElectronicos;
 
+import java.util.Scanner;
+
 public class Television extends DispositivoElectronico{
 
     private String modelo;
@@ -11,6 +13,20 @@ public class Television extends DispositivoElectronico{
         this.modelo = modelo;
         this.resolucion = resolucion;
         this.audio = audio;
+    }
+
+    protected static Television nuevo(Scanner sc){
+        String modelo, audio;
+        int resolucion;
+        DispositivoElectronico aux = DispositivoElectronico.nuevo(sc);
+        System.out.println("Introduzca el modelo:");
+        modelo = sc.nextLine();
+        System.out.println("Introduzca el audio:");
+        audio = sc.nextLine();
+        System.out.println("Introduzca la resolucion");
+        resolucion = sc.nextInt();
+        sc.nextLine();
+        return new Television(aux.getAño(), aux.getPrecio(), modelo, resolucion, audio);
     }
 
     protected void setModelo(String modelo){

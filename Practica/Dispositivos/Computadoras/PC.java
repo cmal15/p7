@@ -5,22 +5,17 @@ import java.util.Scanner;
 public class PC extends Computadora{
         protected boolean correFriFayer;
         
-    public PC(String modelo, String marca, boolean correFriFayer){
-        super(modelo,marca);
+    public PC(int año, double precio, String modelo, String marca, boolean correFriFayer){
+        super(año, precio, modelo, marca);
         this.correFriFayer=correFriFayer;
     }   
     
     protected static PC nuevo(Scanner sc){
-        String modelo;
-        String marca;
         boolean correFriFayer;
-        System.out.print("Introduzca el modelo: ");
-        modelo = sc.nextLine();
-        System.out.print("Introduzca la marca: ");
-        marca = sc.nextLine();
+        Computadora aux = Computadora.nuevo(sc);
         System.out.print("Puedes jugar FreeFire en esta compu(true/false): ");
         correFriFayer = sc.nextBoolean();
-        return new PC(modelo,marca,correFriFayer);
+        return new PC(aux.getAño(), aux.getPrecio(), aux.getModelo(), aux.getMarca(),correFriFayer);
     }
     
     protected void setcorreFriFayer(boolean correFriFayer){

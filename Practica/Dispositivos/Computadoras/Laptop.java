@@ -6,29 +6,21 @@ public class Laptop extends Computadora{
     
     protected int peso;
     protected int duracionBateria;
-    
-    public Laptop(String modelo, String marca, double precio, int peso, int duracionBateria){
-        super(modelo,marca,precio);
-        this.peso=peso;
-        this.duracionBateria=duracionBateria;
+
+    public Laptop(int año, double precio, String modelo, String marca, int peso, int duracionBateria){
+        super(año, precio, modelo, marca);
+        this.peso = peso;
+        this.duracionBateria = duracionBateria;
     }
     
     public static Laptop nuevo(Scanner sc){
-        String modelo;
-        String marca;
-        float precio;
         int peso,duracionBateria;
-        System.out.print("Introduzca el modelo: ");
-        modelo = sc.nextLine();
-        System.out.print("Introduzca la marca: ");
-        marca = sc.nextLine();
-        System.out.print("Introduzca el precio: ");
-        precio = sc.nextFloat();
+        Computadora aux = Computadora.nuevo(sc);
         System.out.print("Introduzca el peso del modelo: ");
         peso = sc.nextInt();
         System.out.print("Introduzca la duracion de la bateria: ");
         duracionBateria = sc.nextInt();
-        return new Laptop(modelo,marca,precio,peso,duracionBateria);
+        return new Laptop(aux.getAño(),aux.getPrecio(),aux.getModelo(),aux.getMarca(),peso,duracionBateria);
     }
     
     public void setPeso(int peso){
