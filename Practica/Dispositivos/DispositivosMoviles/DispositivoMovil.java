@@ -1,3 +1,5 @@
 package Dispositivos.DispositivosMoviles;
 
+import Dispositivos.DispositivosElectronicos.DispositivoElectronico;
+
 public class DispositivoMovil extends DispositivoElectronico{}

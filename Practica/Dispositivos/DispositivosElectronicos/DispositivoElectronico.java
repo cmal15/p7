@@ -1,3 +1,3 @@
 package Dispositivos.DispositivosElectronicos;
 
-public class DispositivoElectonico{}
+public class DispositivoElectronico{}
