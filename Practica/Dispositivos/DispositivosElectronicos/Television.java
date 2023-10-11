@@ -6,8 +6,8 @@ public class Television extends DispositivoElectronico{
     private int resolucion;
     private String audio;
 
-    public Television(int año, boolean bateriaInterna, String modelo, int resolucion, String audio){
-        super(año, bateriaInterna);
+    public Television(int año, double precio, String modelo, int resolucion, String audio){
+        super(año, precio);
         this.modelo = modelo;
         this.resolucion = resolucion;
         this.audio = audio;
@@ -37,6 +37,7 @@ public class Television extends DispositivoElectronico{
         return audio;
     }
 
+    @Override
     protected String getClassName(){
         return "Television";
     }

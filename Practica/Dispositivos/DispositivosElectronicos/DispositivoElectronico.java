@@ -3,23 +3,23 @@ package Dispositivos.DispositivosElectronicos;
 public class DispositivoElectronico{
 
     private int año;
-    private boolean bateriaInterna;
+    private double precio;
 
-    public DispositivoElectronico(int año, boolean bateriaInterna){
+    public DispositivoElectronico(int año, double precio){
         this.año = año;
-        this.bateriaInterna = bateriaInterna;
+        this.precio = precio;
     }
 
-    public void setBateriaInterna(boolean bateriaInterna){
-        this.bateriaInterna = bateriaInterna;
+    public void setPrecio(double precio){
+        this.precio = precio;
     }
 
     protected void setAño(int año){
         this.año = año;
     }
 
-    protected boolean getBateriaInterna(){
-        return bateriaInterna;
+    protected double getPrecio(){
+        return precio;
     }
 
     protected int getAño(){
