@@ -1,5 +1,7 @@
 package Comprador;
+
 import java.util.Scanner;
+
 public class Estudiante extends Comprador{
     protected String nivelDeEstudios;
     public Estudiante(String nombre, String apellido, int numeroDeCuenta, String nivelDeEstudios){

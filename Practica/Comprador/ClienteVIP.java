@@ -1,5 +1,7 @@
 package Comprador;
+
 import java.util.Scanner;
+
 public class ClienteVIP extends Comprador{
     protected int puntosLealtad;
     public ClienteVIP(String nombre, String apellido, int numeroDeCuenta, int puntosLealtad){
@@ -20,7 +22,7 @@ public class ClienteVIP extends Comprador{
         puntosLealtad = sc.nextInt();
         return new ClienteVIP(nombre,apellido,numeroDeCuenta,puntosLealtad);
     }
-    public void setPuntosLealtad(int numeroDeCuenta){
+    public void setPuntosLealtad(int puntosLealtad){
         this.puntosLealtad=puntosLealtad;
     }
     public int getPuntosLealtad(){

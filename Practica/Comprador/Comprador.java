@@ -1,4 +1,7 @@
 package Comprador;
+
+import java.util.Scanner;
+
 public class Comprador{
     private String nombre;
     private String apellido;
@@ -20,7 +23,7 @@ public class Comprador{
         nombre = sc.nextLine();
         System.out.print("Introduzca apellido: ");
         nombre = sc.nextLine();
-        return new Comprador(numeroDeCuenta,nombre,apellido);
+        return new Comprador(nombre,apellido,numeroDeCuenta);
     }
 
     public int getNumeroDeCuenta(){
@@ -38,7 +41,7 @@ public class Comprador{
     public void setNombre(String nombre){
         this.nombre = nombre;
     }
-    public void setApellido(String nombre){
+    public void setApellido(String apellido){
         this.apellido = apellido;
     }
 }
