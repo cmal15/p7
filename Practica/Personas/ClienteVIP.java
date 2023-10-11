@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public class ClienteVIP extends Comprador{
     protected int puntosLealtad;
-    public ClienteVIP(String nombre, String apellido, int numeroDeCuenta, int puntosLealtad){
+    protected ClienteVIP(String nombre, String apellido, int numeroDeCuenta, int puntosLealtad){
         super(nombre,apellido,numeroDeCuenta);
         this.puntosLealtad=puntosLealtad;
     }
-    public static ClienteVIP nuevo(Scanner sc){
+    protected static ClienteVIP nuevo(Scanner sc){
         int numeroDeCuenta,puntosLealtad;
         String nombre;
         String apellido;
@@ -22,10 +22,10 @@ public class ClienteVIP extends Comprador{
         puntosLealtad = sc.nextInt();
         return new ClienteVIP(nombre,apellido,numeroDeCuenta,puntosLealtad);
     }
-    public void setPuntosLealtad(int puntosLealtad){
+    protected void setPuntosLealtad(int puntosLealtad){
         this.puntosLealtad=puntosLealtad;
     }
-    public int getPuntosLealtad(){
+    protected int getPuntosLealtad(){
         return puntosLealtad;
     }
 }

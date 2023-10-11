@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public class Estudiante extends Comprador{
     protected String nivelDeEstudios;
-    public Estudiante(String nombre, String apellido, int numeroDeCuenta, String nivelDeEstudios){
+    protected Estudiante(String nombre, String apellido, int numeroDeCuenta, String nivelDeEstudios){
         super(nombre,apellido,numeroDeCuenta);
         this.nivelDeEstudios=nivelDeEstudios;
     }
-    public static Estudiante nuevo(Scanner sc){
+    protected static Estudiante nuevo(Scanner sc){
         int numeroDeCuenta;
         String nombre;
         String apellido;
@@ -23,10 +23,10 @@ public class Estudiante extends Comprador{
         nivelDeEstudios = sc.nextLine();
         return new Estudiante(nombre,apellido,numeroDeCuenta,nivelDeEstudios);
     }
-    public void setNivelDeEstudios(String nivelDeEstudios){
+    protected void setNivelDeEstudios(String nivelDeEstudios){
         this.nivelDeEstudios=nivelDeEstudios;
     }
-    public String getNivelDeEstudios(){
+    protected String getNivelDeEstudios(){
         return nivelDeEstudios;
     }
 }
