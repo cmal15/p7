@@ -1,3 +1,3 @@
-package Dispositivos.Computadora;
+package Dispositivos.Computadoras;
 
 public class Computadora extends DispositivoElectronico{}

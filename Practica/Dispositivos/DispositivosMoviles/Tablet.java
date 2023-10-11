@@ -1,3 +1,3 @@
-package Dispositivos.DispositivoMovil;
+package Dispositivos.DispositivosMoviles;
 
 public class Tablet extends DispositivoMovil{}

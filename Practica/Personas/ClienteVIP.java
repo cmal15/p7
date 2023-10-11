@@ -1,4 +1,4 @@
-package Comprador;
+package Personas;
 
 import java.util.Scanner;
 
