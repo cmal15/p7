@@ -3,9 +3,9 @@ package Personas;
 import java.util.Scanner;
 
 public class Comprador{
-    private String nombre;
-    private String apellido;
-    private int numeroDeCuenta;
+    protected String nombre;
+    protected String apellido;
+    protected int numeroDeCuenta;
 
     protected Comprador(String nombre, String apellido, int numeroDeCuenta){
         this.nombre = nombre;
