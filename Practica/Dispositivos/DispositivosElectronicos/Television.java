@@ -15,7 +15,7 @@ public class Television extends DispositivoElectronico{
         this.audio = audio;
     }
 
-    protected static Television nuevo(Scanner sc){
+    public static Television nuevo(Scanner sc){
         String modelo, audio;
         int resolucion;
         DispositivoElectronico aux = DispositivoElectronico.nuevo(sc);

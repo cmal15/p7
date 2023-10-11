@@ -13,7 +13,7 @@ public class Computadora extends DispositivoElectronico{
         this.marca = marca;
     }
 
-    protected static Computadora nuevo(Scanner sc){
+    public static Computadora nuevo(Scanner sc){
         String modelo;
         String marca;
         DispositivoElectronico aux = DispositivoElectronico.nuevo(sc);

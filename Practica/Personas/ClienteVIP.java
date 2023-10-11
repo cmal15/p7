@@ -8,7 +8,8 @@ public class ClienteVIP extends Comprador{
         super(nombre,apellido,numeroDeCuenta);
         this.puntosLealtad=puntosLealtad;
     }
-    protected static ClienteVIP nuevo(Scanner sc){
+
+    public static ClienteVIP nuevo(Scanner sc){
         int numeroDeCuenta,puntosLealtad;
         String nombre;
         String apellido;
@@ -22,9 +23,11 @@ public class ClienteVIP extends Comprador{
         puntosLealtad = sc.nextInt();
         return new ClienteVIP(nombre,apellido,numeroDeCuenta,puntosLealtad);
     }
+    
     protected void setPuntosLealtad(int puntosLealtad){
         this.puntosLealtad=puntosLealtad;
     }
+    
     protected int getPuntosLealtad(){
         return puntosLealtad;
     }

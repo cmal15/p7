@@ -12,7 +12,7 @@ public class DispositivoElectronico{
         this.precio = precio;
     }
 
-    protected static DispositivoElectronico nuevo(Scanner sc){
+    public static DispositivoElectronico nuevo(Scanner sc){
         int año;
         double precio;
         System.out.println("Introduzca el año del dispositivo");

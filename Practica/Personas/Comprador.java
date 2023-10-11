@@ -13,7 +13,7 @@ public class Comprador{
         this.numeroDeCuenta = numeroDeCuenta;
     }
 
-    protected static Comprador nuevo(Scanner sc){
+    public static Comprador nuevo(Scanner sc){
         int numeroDeCuenta;
         String nombre;
         String apellido;

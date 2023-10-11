@@ -10,7 +10,7 @@ public class PC extends Computadora{
         this.correFriFayer=correFriFayer;
     }   
     
-    protected static PC nuevo(Scanner sc){
+    public static PC nuevo(Scanner sc){
         boolean correFriFayer;
         Computadora aux = Computadora.nuevo(sc);
         System.out.print("Puedes jugar FreeFire en esta compu(true/false): ");

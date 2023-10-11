@@ -8,7 +8,8 @@ public class Estudiante extends Comprador{
         super(nombre,apellido,numeroDeCuenta);
         this.nivelDeEstudios=nivelDeEstudios;
     }
-    protected static Estudiante nuevo(Scanner sc){
+
+    public static Estudiante nuevo(Scanner sc){
         int numeroDeCuenta;
         String nombre;
         String apellido;
@@ -23,9 +24,11 @@ public class Estudiante extends Comprador{
         nivelDeEstudios = sc.nextLine();
         return new Estudiante(nombre,apellido,numeroDeCuenta,nivelDeEstudios);
     }
+    
     protected void setNivelDeEstudios(String nivelDeEstudios){
         this.nivelDeEstudios=nivelDeEstudios;
     }
+    
     protected String getNivelDeEstudios(){
         return nivelDeEstudios;
     }

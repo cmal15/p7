@@ -6,7 +6,8 @@ public class Socio extends Comprador{
         super(nombre,apellido,numeroDeCuenta);
         this.codigoDeConvenio=codigoDeConvenio;
     }
-    protected static Socio nuevo(Scanner sc){
+
+    public static Socio nuevo(Scanner sc){
         int numeroDeCuenta;
         String nombre;
         String apellido;
@@ -21,9 +22,11 @@ public class Socio extends Comprador{
         codigoDeConvenio = sc.nextLine();
         return new Socio(nombre,apellido,numeroDeCuenta,codigoDeConvenio);
     }
+    
     protected void setCodigoDeConvenio(String codigoDeConvenio){
         this.codigoDeConvenio=codigoDeConvenio;
     }
+    
     protected String getCodigoDeConvenio(){
         return codigoDeConvenio;
     }

@@ -16,7 +16,7 @@ public class DispositivoMovil extends DispositivoElectronico{
         this.bateriaInterna = bateriaInterna;
     }
 
-    protected static DispositivoMovil nuevo(Scanner sc){
+    public static DispositivoMovil nuevo(Scanner sc){
         String marca, modelo;
         DispositivoMovil aux = DispositivoElectronico.nuevo(sc);
         System.out.println("Introduzca la marca");
