@@ -22,7 +22,7 @@ public class Comprador{
         System.out.print("Introduzca nombre: ");
         nombre = sc.nextLine();
         System.out.print("Introduzca apellido: ");
-        nombre = sc.nextLine();
+        apellido = sc.nextLine();
         return new Comprador(nombre,apellido,numeroDeCuenta);
     }
 

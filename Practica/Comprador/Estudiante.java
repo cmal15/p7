@@ -23,7 +23,7 @@ public class Estudiante extends Comprador{
         nivelDeEstudios = sc.nextLine();
         return new Estudiante(nombre,apellido,numeroDeCuenta,nivelDeEstudios);
     }
-    public void setNivelDeEstudios(int numeroDeCuenta){
+    public void setNivelDeEstudios(String nivelDeEstudios){
         this.nivelDeEstudios=nivelDeEstudios;
     }
     public String getNivelDeEstudios(){
