@@ -3,40 +3,38 @@ package Dispositivos.Computadoras;
 import Dispositivos.DispositivosElectronicos.DispositivoElectronico;
 
 public class Computadora extends DispositivoElectronico{   
-    protected int peso;
-    protected int duracionBateria;
-    public Laptop(String modelo, String marca, int peso, int duracionBateria){
-        super(modelo,marca);
-        this.peso=peso;
-        this.duracionBateria=duracionBateria;
+    protected String modelo;
+    protected String marca;
+
+    protected Computadora(String modelo, String marca){
+        this.modelo = modelo;
+        this.marca = marca;
     }
-    protected static Laptop nuevo(Scanner sc){
+
+    protected static Computadora nuevo(Scanner sc){
         String modelo;
         String marca;
-        int peso,duracionBateria;
+        float precio;
         System.out.print("Introduzca el modelo: ");
         modelo = sc.nextLine();
         System.out.print("Introduzca la marca: ");
         marca = sc.nextLine();
-        System.out.print("Introduzca el peso del modelo: ");
-        peso = sc.nextInt();
-        System.out.print("Introduzca la duracion de la bateria: ");
-        duracionBateria = sc.nextInt();
-        return new Laptop(modelo,marca,peso,duracionBateria);
+        return new Computadora(modelo,marca);
     }
-    protected void setPeso(int peso){
-        this.peso=peso;
+
+    protected String getModelo(){
+        return modelo;
     }
-    protected int getPeso(){
-        return peso;
+    protected String getMarca(){
+        return marca;
     }
-    protected void setduracionBateria(int duracionBateria){
-        this.duracionBateria=duracionBateria;
+    protected void setModelo(String modelo){
+        this.modelo = modelo;
     }
-    protected int getduracionBateria(){
-        return duracionBateria;
+    protected void setMarca(String modelo){
+        this.marca = marca;
     }
     protected String getClassName(){
-        return "LapTop";
+        return "Computadora";
     }
   }
