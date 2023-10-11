@@ -7,13 +7,13 @@ public class Comprador{
     private String apellido;
     private int numeroDeCuenta;
 
-    public Comprador(String nombre, String apellido, int numeroDeCuenta){
+    protected Comprador(String nombre, String apellido, int numeroDeCuenta){
         this.nombre = nombre;
         this.apellido = apellido;
         this.numeroDeCuenta = numeroDeCuenta;
     }
 
-    public static Comprador nuevo(Scanner sc){
+    protected static Comprador nuevo(Scanner sc){
         int numeroDeCuenta;
         String nombre;
         String apellido;
@@ -26,22 +26,22 @@ public class Comprador{
         return new Comprador(nombre,apellido,numeroDeCuenta);
     }
 
-    public int getNumeroDeCuenta(){
+    protected int getNumeroDeCuenta(){
         return numeroDeCuenta;
     }
-    public String getNombre(){
+    protected String getNombre(){
         return nombre;
     }
-    public String getApellido(){
+    protected String getApellido(){
         return apellido;
     }
-    public void setNumeroDeCuenta(int numeroDeCuenta){
+    protected void setNumeroDeCuenta(int numeroDeCuenta){
         this.numeroDeCuenta =  numeroDeCuenta;
     }
-    public void setNombre(String nombre){
+    protected void setNombre(String nombre){
         this.nombre = nombre;
     }
-    public void setApellido(String apellido){
+    protected void setApellido(String apellido){
         this.apellido = apellido;
     }
 }
