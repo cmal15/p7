@@ -1,3 +1,4 @@
+import java.util.LinkedList;
 import java.util.Scanner;
 
 import Personas.*;
@@ -50,24 +51,88 @@ public class Principal {
         }
         do{
             System.out.println("1.Agregar al carrito\t2.Ver productos\t3.Pagar\t4.Finalizar compra");
+            op = sc.nextInt();
+            int aux;
+            switch (op) {
+                case 1:
+                    int op2;
+                    System.out.println("1.Smatphones");
+                    System.out.println("2.Tablets");
+                    System.out.println("3.Televisiones");
+                    System.out.println("4.Laptops");
+                    System.out.println("5.Pc");
+                    op2 = sc.nextInt();
+                    switch (op2) {
+                        case 1:
+                            System.out.println("Introduzca el indice de la lista del producto deseado");
+                            aux = sc.nextInt();
+                            if(aux < comprador.smartphones.size()){
+                                
+                            }
+                            break;
+                        case 2:
+                            
+                            break;
+                        case 3:
+                            
+                            break;
+                        case 4:
+                            
+                            break;
+                        case 5:
+                            
+                            break;
+                    
+                        default:
+                            break;
+                    }
+                    break;
+                case 2:
+                    
+                    break;
+                case 3:
+                    
+                    break;
+            
+                default:
+                    break;
+            }
         }while(op != 3);
         sc.close();
     }
 
     public void imprimirProductos(Comprador comprador){
+        int i = 0;
         for (Smartphone aux : comprador.smartphones) {
+            System.out.println("Producto "+ i++);
             aux.print();
         }
+        i = 0;
         for (Tablet aux : comprador.tablets) {
+            System.out.println("Producto "+ i++);
             aux.print();
         }
+        i = 0;
         for (Television aux : comprador.televisiones) {
+            System.out.println("Producto "+ i++);
             aux.print();
         }
+        i = 0;
         for (Laptop aux : comprador.laptops) {
+            System.out.println("Producto "+ i++);
             aux.print();
         }
+        i = 0;
         for (PC aux : comprador.pcs) {
+            System.out.println("Producto "+ i++);
+            aux.print();
+        }
+    }
+
+    public void imprimirProducto(LinkedList<DispositivoElectronico> list){
+        int i = 0;
+        for (DispositivoElectronico aux : list) {
+            System.out.println("Producto "+ i++);
             aux.print();
         }
     }
