@@ -135,30 +135,35 @@ public class Principal {
 
     public static void imprimirProductos(Comprador comprador){
         int i = 0;
+        System.out.println("Smartphones");
         for (Smartphone aux : comprador.smartphones) {
             System.out.println("Producto "+ i++);
             i++;
             aux.print();
         }
         i = 0;
+        System.out.println("Tablets");
         for (Tablet aux : comprador.tablets) {
             System.out.println("Producto "+ i);
             i++;
             aux.print();
         }
         i = 0;
+        System.out.println("Televisiones");
         for (Television aux : comprador.televisiones) {
             System.out.println("Producto "+ i++);
             i++;
             aux.print();
         }
         i = 0;
+        System.out.println("Laptops");
         for (Laptop aux : comprador.laptops) {
             System.out.println("Producto "+ i++);
             i++;
             aux.print();
         }
         i = 0;
+        System.out.println("Pcs");
         for (PC aux : comprador.pcs) {
             System.out.println("Producto "+ i++);
             i++;
