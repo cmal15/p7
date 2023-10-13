@@ -1,5 +1,9 @@
 import java.util.LinkedList;
-public class listas{
+import Dispositivos.Computadoras.*;
+import Dispositivos.DispositivosElectronicos.*;
+import Dispositivos.DispositivosMoviles.*;
+
+public class Listas{
     public LinkedList<Smartphone> smartphones;
     public LinkedList<Tablet> tablets;
     public LinkedList<Television> televisiones;
