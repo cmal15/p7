@@ -12,7 +12,7 @@ public class Carrito {
     public LinkedList<Television> televisiones;
     public LinkedList<Laptop> laptops;
     public LinkedList<PC> pcs;
-    public int total;
+    public double total;
 
     public Carrito(){
         smartphones = new LinkedList<>();
