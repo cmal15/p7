@@ -1,9 +1,9 @@
 package Dispositivos.DispositivosMoviles;
-
+import java.util.Scanner;
 public class Tablet extends DispositivoMovil{
-
     //atributos
-
+    private boolean tienePluma;
+    
     public Tablet(int año, double precio, String marca, String modelo, int bateriaInterna,boolean tienePluma){
         super(año, precio, marca, modelo, bateriaInterna);
         this.protected boolean tienePluma;
