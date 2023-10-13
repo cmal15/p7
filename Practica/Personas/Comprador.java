@@ -2,7 +2,7 @@ package Personas;
 import Dispositivos.Computadoras.*;
 import Dispositivos.DispositivosElectronicos.*;
 import Dispositivos.DispositivosMoviles.*;
-import java.util.Scanner;
+import java.util.LinkedList;
 
 public class Comprador{
     public LinkedList<Smartphone> smartphones;
@@ -15,7 +15,7 @@ public class Comprador{
         this.smartphones=smartphones;
         this.tablets=tablets;
         this.televisiones=televisiones;
-        this.laptos=laptops;
+        this.laptops=laptops;
         this.pcs=pcs;
     }
 
