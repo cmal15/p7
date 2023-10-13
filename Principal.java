@@ -93,7 +93,7 @@ public class Principal {
                             System.out.println("Introduzca el indice de la lista del producto deseado");
                             aux = sc.nextInt();
                             if(aux < comprador.laptops.size()){
-                                carrito.getLaptops().add(comprador.laptops.get(aux));
+                                carrito.addLaptop(comprador.laptops.get(aux));
                                 System.out.println("Añadido al carrito");
                             }                            
                             
@@ -102,7 +102,7 @@ public class Principal {
                             System.out.println("Introduzca el indice de la lista del producto deseado");
                             aux = sc.nextInt();
                             if(aux < comprador.pcs.size()){
-                                carrito.getPcs().add(comprador.pcs.get(aux));
+                                carrito.addPC(comprador.pcs.get(aux));
                                 System.out.println("Añadido al carrito");
                             }                            
                             
