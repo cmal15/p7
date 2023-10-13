@@ -9,21 +9,34 @@ public class Principal {
 
     public static void main(String[] args) {
         int op;
-        ClienteVIP Vip = new ;
+        ClienteVIP vip = null;
+        Socio socio = null;
+        Estudiante estudiante = null;
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduzca el tipo de cliente:");
         System.out.println("1. Socio\t2. Cliente VIP\t 3. Estudiante");
         op = sc.nextInt();
         switch (op) {
             case 1:
+                if(vip == null){
+                    vip = ClienteVIP.nuevo(sc);
+                }
                 System.out.println("Los productos disponibles son:");
-                imprimirProductos();
+                imprimirProductos(vip);
                 break;
             case 2:
-                System.out.println("Los productos disponibles son:")
+                if(socio == null){
+                    socio = Socio.nuevo(sc);
+                }            
+                System.out.println("Los productos disponibles son:");
+                imprimirProductos(socio);
                 break;
             case 3:
-                System.out.println("Los productos disponibles son:")
+                if(estudiante == null){
+                    estudiante = Estudiante.nuevo(sc);
+                }
+                System.out.println("Los productos disponibles son:");
+                imprimirProductos(estudiante);
                 break;
         
             default:
