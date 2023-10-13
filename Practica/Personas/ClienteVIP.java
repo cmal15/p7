@@ -1,34 +1,27 @@
 package Personas;
-
+import Dispositivos.Computadoras.*;
+import Dispositivos.DispositivosElectronicos.*;
+import Dispositivos.DispositivosMoviles.*;
+import java.util.Scanner;
 import java.util.Scanner;
 
 public class ClienteVIP extends Comprador{
-    protected int puntosLealtad;
-    protected ClienteVIP(String nombre, String apellido, int numeroDeCuenta, int puntosLealtad){
-        super(nombre,apellido,numeroDeCuenta);
-        this.puntosLealtad=puntosLealtad;
-    }
-
-    public static ClienteVIP nuevo(Scanner sc){
-        int numeroDeCuenta,puntosLealtad;
-        String nombre;
-        String apellido;
-        System.out.print("Introduzca numero de cuenta: ");
-        numeroDeCuenta = sc.nextInt();
-        System.out.print("Introduzca nombre: ");
-        nombre = sc.nextLine();
-        System.out.print("Introduzca apellido: ");
-        apellido = sc.nextLine();
-        System.out.print("Introduzca cuantos puntosLealtad tiene: ");
-        puntosLealtad = sc.nextInt();
-        return new ClienteVIP(nombre,apellido,numeroDeCuenta,puntosLealtad);
-    }
-    
-    protected void setPuntosLealtad(int puntosLealtad){
-        this.puntosLealtad=puntosLealtad;
-    }
-    
-    protected int getPuntosLealtad(){
-        return puntosLealtad;
+    public ClienteVIP(){
+        public LinkedList<Smartphone> smartphones;
+        public LinkedList<Tablet> tablets;
+        public LinkedList<Television> televisiones;
+        public LinkedList<Laptop> laptops;
+        public LinkedList<PC> pcs;
+        Smartphone smartphone=new Smartphone(2023, 25000.0, "Apple", "Iphone", true, "T-mobile","ilimitado","Proteccion Max", "alta");
+        smartphones.add(smarthpone);
+        Tablet tablet=new Tablet(2023,30000.0,"Apple","Ipadpro",true,true)
+        tablets.add(tablet);
+        Television tele=new Television(2023, 50000.00,"pantallaPlana", 4000, "surround");
+        televisiones.add(tele);
+        Laptop laptop=new Laptop(2023, 100000.0, "Macbook Pro", "Apple", 10, 500);
+        laptops.add(laptop);
+        PC pc=ne PC(2023, 150000.0, "MacPro", "Apple", true);
+        pcs.add(pc);
+        super(smartphones,tablets,televisiones,laptops,pcs);
     }
 }
