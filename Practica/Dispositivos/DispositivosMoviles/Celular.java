@@ -1,4 +1,5 @@
 package Dispositivos.DispositivosMoviles;
+import java.util.Scanner;
 
 public class Celular extends DispositivoMovil{    
     private String companiaTelefonica;
