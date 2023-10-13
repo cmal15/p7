@@ -22,7 +22,7 @@ public class Principal {
         switch (op) {
             case 1:
                 if(vip == null){
-                    vip = new ClienteVIP();
+                    vip = new ClienteVIP(ClienteVIP.iniciarVIP());
                 }
                 comprador = vip;
                 System.out.println("Los productos disponibles son:");
@@ -31,7 +31,7 @@ public class Principal {
                 break;
             case 2:
                 if(socio == null){
-                    socio = Socio.nuevo(sc);
+                    socio = Socio(Socio.iniciarSocio());
                 }            
                 comprador = socio;
                 System.out.println("Los productos disponibles son:");
@@ -39,7 +39,7 @@ public class Principal {
                 break;
             case 3:
                 if(estudiante == null){
-                    estudiante = Estudiante.nuevo(sc);
+                    estudiante = Estudiante(Estudiante.iniciarEstudiante());
                 }
                 comprador = socio;
                 System.out.println("Los productos disponibles son:");
