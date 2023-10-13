@@ -6,6 +6,11 @@ import java.util.Scanner;
 
 public class ClienteVIP extends Comprador{
     public ClienteVIP(){
+        smartphones = new LinkedList<>();
+        tablets = new LinkedList<>();
+        televisiones = new LinkedList<>();
+        laptops = new LinkedList<>();
+        pcs = new LinkedList<>();
         public LinkedList<Smartphone> smartphones;
         public LinkedList<Tablet> tablets;
         public LinkedList<Television> televisiones;
@@ -17,7 +22,7 @@ public class ClienteVIP extends Comprador{
         tablets.add(tablet);
         Television tele=new Television(2023, 50000.00,"pantallaPlana", 4000, "surround");
         televisiones.add(tele);
-        Laptop laptop=new Laptop(2023, 100000.0, "Macbook Pro", "Apple", 10, 500);
+        Laptop laptop=new Laptop(2023,100000.0, "Macbook Pro", "Apple", 10, 500);
         laptops.add(laptop);
         PC pc=new PC(2023, 150000.0, "MacPro", "Apple", true);
         pcs.add(pc);
