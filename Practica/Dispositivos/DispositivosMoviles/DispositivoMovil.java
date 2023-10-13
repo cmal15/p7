@@ -56,4 +56,9 @@ public class DispositivoMovil extends DispositivoElectronico{
     protected String getClassName(){
         return "DispositivoMovil";
     }
+
+    public void print(){
+        System.out.println(modelo + " " + marca + " Precio: " + this.getPrecio());
+    }
+
 }

@@ -58,4 +58,8 @@ public class Television extends DispositivoElectronico{
         return "Television";
     }
 
+    public void print(){
+        System.out.println("Modelo:" + modelo + " Precio: "+ this.getPrecio());
+    }
+
 }

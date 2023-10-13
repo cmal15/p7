@@ -22,7 +22,7 @@ public class Principal {
         switch (op) {
             case 1:
                 if(vip == null){
-                    vip = ClienteVIP.nuevo(sc);
+                    vip = new ClienteVIP();
                 }
                 comprador = vip;
                 System.out.println("Los productos disponibles son:");
@@ -47,8 +47,9 @@ public class Principal {
                 break;
         
             default:
+            sc.close();
             return;
-                break;
+                
         }
         do{
             System.out.println("1.Agregar al carrito\t2.Ver productos\t3.Pagar\t4.Finalizar compra");
@@ -160,15 +161,6 @@ public class Principal {
             aux.print();
         }
     }
-
-    public void imprimirProducto(LinkedList<DispositivoElectronico> list){
-        int i = 0;
-        for (DispositivoElectronico aux : list) {
-            System.out.println("Producto "+ i++);
-            aux.print();
-        }
-    }
-
 }
 
 

@@ -39,4 +39,9 @@ public class Computadora extends DispositivoElectronico{
     protected String getClassName(){
         return "Computadora";
     }
+
+    public void print(){
+        System.out.println(modelo + " " + marca + " Precio: " + this.getPrecio());
+    }
+
   }
