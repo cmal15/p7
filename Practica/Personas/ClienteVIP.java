@@ -3,7 +3,6 @@ import Dispositivos.Computadoras.*;
 import Dispositivos.DispositivosElectronicos.*;
 import Dispositivos.DispositivosMoviles.*;
 import java.util.Scanner;
-import java.util.Scanner;
 
 public class ClienteVIP extends Comprador{
     public ClienteVIP(){
