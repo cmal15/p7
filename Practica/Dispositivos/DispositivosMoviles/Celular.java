@@ -21,4 +21,19 @@ public class Celular extends DispositivoMovil{
         PlandeDatos = sc.nextLine();
         return new Celular(aux.getAño(),aux.getPrecio(),aux.getMarca(),aux.getModelo(),aux.getBateriaInterna(),companiaTelefonica,planDeDatos);
     }
+    protected void setCompaniaTelefonica(String marca){
+        this.companiaTelefonica = companiaTelefonica;
+    }
+
+    protected void setPlanDeDatos(String modelo){
+        this.planDeDatos = planDeDatos;
+    }
+
+    protected String getCompaniaTelefonica(){
+        return companiaTelefonica;
+    }
+
+    protected String getPlanDeDatos(){
+        return planDeDatos;
+    }
 }
