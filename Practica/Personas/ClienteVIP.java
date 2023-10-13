@@ -6,7 +6,15 @@ import java.util.Scanner;
 import java.util.LinkedList;
 
 public class ClienteVIP extends Comprador{
-    public ClienteVIP(){
+    public ClienteVIP(Comprador comprador){
+        super(comprador.getSmartphone(),comprador.getTablet(),comprador.getTelevision(),comprador.getLaptops(),comprador.getPcs())
+        this.smartphones=smartphones;
+        this.tablets=tablets;
+        this.televisiones=televisiones;
+        this.laptops=laptops;
+        this.pcs=pcs;
+    }
+    public static Comprador iniciarVIP(){
         LinkedList<Smartphone> smartphones= new LinkedList<>();
         LinkedList<Tablet> tablets= new LinkedList<>();
         LinkedList<Television> televisiones= new LinkedList<>();
@@ -22,10 +30,7 @@ public class ClienteVIP extends Comprador{
         laptops.add(laptop);
         PC pc=new PC(2023, 150000.0, "MacPro", "Apple", true);
         pcs.add(pc);
-        this.smartphones=smartphones;
-        this.tablets=tablets;
-        this.televisiones=televisiones;
-        this.laptops=laptops;
-        this.pcs=pcs;
+        comprador=new Comprador(smartphones,tablets,televisiones,laptops,pcs);
+        return comprador;
     }
 }
