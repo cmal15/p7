@@ -12,6 +12,7 @@ public class Principal {
         ClienteVIP vip = null;
         Socio socio = null;
         Estudiante estudiante = null;
+        Comprador comprador = null;
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduzca el tipo de cliente:");
         System.out.println("1. Socio\t2. Cliente VIP\t 3. Estudiante");
@@ -21,13 +22,16 @@ public class Principal {
                 if(vip == null){
                     vip = ClienteVIP.nuevo(sc);
                 }
+                comprador = vip;
                 System.out.println("Los productos disponibles son:");
                 imprimirProductos(vip);
+                
                 break;
             case 2:
                 if(socio == null){
                     socio = Socio.nuevo(sc);
                 }            
+                comprador = socio;
                 System.out.println("Los productos disponibles son:");
                 imprimirProductos(socio);
                 break;
@@ -35,13 +39,18 @@ public class Principal {
                 if(estudiante == null){
                     estudiante = Estudiante.nuevo(sc);
                 }
+                comprador = socio;
                 System.out.println("Los productos disponibles son:");
                 imprimirProductos(estudiante);
                 break;
         
             default:
+            return;
                 break;
         }
+        do{
+            System.out.println("1.Agregar al carrito\t2.Ver productos\t3.Pagar\t4.Finalizar compra");
+        }while(op != 3);
         sc.close();
     }
 
