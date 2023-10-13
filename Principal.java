@@ -167,13 +167,3 @@ public class Principal {
         }
     }
 }
-
-
-/*
-*     public LinkedList<Smartphone> smartphones;
-    public LinkedList<Tablet> tablets;
-    public LinkedList<Television> televisiones;
-    public LinkedList<Laptop> laptops;
-    public LinkedList<PC> pcs;
- * 
- */
