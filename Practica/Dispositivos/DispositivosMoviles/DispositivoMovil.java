@@ -18,13 +18,13 @@ public class DispositivoMovil extends DispositivoElectronico{
 
     public static DispositivoMovil nuevo(Scanner sc){
         String marca, modelo;
-        DispositivoMovil aux = DispositivoElectronico.nuevo(sc);
+        DispositivoElectronico aux = DispositivoElectronico.nuevo(sc);
         System.out.println("Introduzca la marca");
         marca = sc.nextLine();
         System.out.println("Introduzca la modelo");
         modelo = sc.nextLine();
         System.out.println("Tiene bateria interna? (true/false)");
-        boolean bateriaInterna = sc.nextBoolean();
+        int bateriaInterna = sc.nextInt();
         return new DispositivoMovil(aux.getAño(), aux.getPrecio(), marca, modelo, bateriaInterna);
     }
 

@@ -14,19 +14,19 @@ public class Celular extends DispositivoMovil{
 
     public static Celular nuevo(Scanner sc){
         String companiaTelefonica;
-        String PlandeDatos;
+        String plandeDatos;
         DispositivoMovil aux = DispositivoMovil.nuevo(sc);
         System.out.println("Introduzca el compania telefonica del dispositivo");
         companiaTelefonica = sc.nextLine();
         System.out.println("Introduce el plan de datos del producto");
-        PlandeDatos = sc.nextLine();
-        return new Celular(aux.getAño(),aux.getPrecio(),aux.getMarca(),aux.getModelo(),aux.getBateriaInterna(),companiaTelefonica,planDeDatos);
+        plandeDatos = sc.nextLine();
+        return new Celular(aux.getAño(),aux.getPrecio(),aux.getMarca(),aux.getModelo(),aux.getBateriaInterna(),companiaTelefonica, plandeDatos);
     }
-    protected void setCompaniaTelefonica(String marca){
+    protected void setCompaniaTelefonica(String companiaTelefonica){
         this.companiaTelefonica = companiaTelefonica;
     }
 
-    protected void setPlanDeDatos(String modelo){
+    protected void setPlanDeDatos(String planDeDatos){
         this.planDeDatos = planDeDatos;
     }
 

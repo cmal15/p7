@@ -6,15 +6,15 @@ public class Tablet extends DispositivoMovil{
     
     public Tablet(int año, double precio, String marca, String modelo, int bateriaInterna,boolean tienePluma){
         super(año, precio, marca, modelo, bateriaInterna);
-        this.protected boolean tienePluma;
+        this.tienePluma = tienePluma;
     }
     //metodos
-    public static Celular nuevo(Scanner sc){
-        String tienePluma;
+    public static Tablet nuevo(Scanner sc){
+        boolean tienePluma;
         DispositivoMovil aux = DispositivoMovil.nuevo(sc);
         System.out.print("Incluye pluma tactil? (true/false): ");
         tienePluma = sc.nextBoolean();
-        return new Celular(aux.getAño(),aux.getPrecio(),aux.getMarca(),aux.getModelo(),aux.getBateriaInterna(),tienePluma);
+        return new Tablet(aux.getAño(),aux.getPrecio(),aux.getMarca(),aux.getModelo(),aux.getBateriaInterna(),tienePluma);
     }
 
     protected void setTienePluma(boolean tienePluma){
