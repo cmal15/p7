@@ -1,13 +1,11 @@
 package Personas;
-import java.util.Scanner;
 import Dispositivos.Computadoras.*;
 import Dispositivos.DispositivosElectronicos.*;
 import Dispositivos.DispositivosMoviles.*;
-import java.util.Scanner;
 import java.util.LinkedList;
 public class Socio extends Comprador{
     public Socio(Comprador comprador){
-        super(comprador.getSmartphones(),comprador.getTablets(),comprador.getTelevisions(),comprador.getLaptopss(),comprador.getPcss())
+        super(comprador.getSmartphones(),comprador.getTablets(),comprador.getTelevisions(),comprador.getLaptopss(),comprador.getPcss());
     }
     public static Comprador iniciarSocio(){
         LinkedList<Smartphone> smartphones= new LinkedList<>();
@@ -25,7 +23,7 @@ public class Socio extends Comprador{
         laptops.add(laptop);
         PC pc=new PC(2019, 15000.0, "Samsung series A", "Samsung", true);
         pcs.add(pc);
-        comprador=new Comprador(smartphones,tablets,televisiones,laptops,pcs);
+        Comprador comprador=new Comprador(smartphones,tablets,televisiones,laptops,pcs);
         return comprador;
     }
 }

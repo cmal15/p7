@@ -2,12 +2,11 @@ package Personas;
 import Dispositivos.Computadoras.*;
 import Dispositivos.DispositivosElectronicos.*;
 import Dispositivos.DispositivosMoviles.*;
-import java.util.Scanner;
 import java.util.LinkedList;
 
 public class ClienteVIP extends Comprador{
     public ClienteVIP(Comprador comprador){
-        super(comprador.getSmartphones(),comprador.getTablets(),comprador.getTelevisions(),comprador.getLaptopss(),comprador.getPcss())
+        super(comprador.getSmartphones(),comprador.getTablets(),comprador.getTelevisions(),comprador.getLaptopss(),comprador.getPcss());
     }
     public static Comprador iniciarVIP(){
         LinkedList<Smartphone> smartphones= new LinkedList<>();
@@ -25,7 +24,7 @@ public class ClienteVIP extends Comprador{
         laptops.add(laptop);
         PC pc=new PC(2023, 150000.0, "MacPro", "Apple", true);
         pcs.add(pc);
-        comprador=new Comprador(smartphones,tablets,televisiones,laptops,pcs);
+        Comprador comprador=new Comprador(smartphones,tablets,televisiones,laptops,pcs);
         return comprador;
     }
 }
