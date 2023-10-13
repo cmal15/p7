@@ -31,7 +31,7 @@ public class Principal {
                 break;
             case 2:
                 if(socio == null){
-                    socio = Socio(Socio.iniciarSocio());
+                    socio = new Socio(Socio.iniciarSocio());
                 }            
                 comprador = socio;
                 System.out.println("Los productos disponibles son:");
@@ -39,7 +39,7 @@ public class Principal {
                 break;
             case 3:
                 if(estudiante == null){
-                    estudiante = Estudiante(Estudiante.iniciarEstudiante());
+                    estudiante = new Estudiante(Estudiante.iniciarEstudiante());
                 }
                 comprador = socio;
                 System.out.println("Los productos disponibles son:");
@@ -138,26 +138,31 @@ public class Principal {
         int i = 0;
         for (Smartphone aux : comprador.smartphones) {
             System.out.println("Producto "+ i++);
+            i++;
             aux.print();
         }
         i = 0;
         for (Tablet aux : comprador.tablets) {
-            System.out.println("Producto "+ i++);
+            System.out.println("Producto "+ i);
+            i++;
             aux.print();
         }
         i = 0;
         for (Television aux : comprador.televisiones) {
             System.out.println("Producto "+ i++);
+            i++;
             aux.print();
         }
         i = 0;
         for (Laptop aux : comprador.laptops) {
             System.out.println("Producto "+ i++);
+            i++;
             aux.print();
         }
         i = 0;
         for (PC aux : comprador.pcs) {
             System.out.println("Producto "+ i++);
+            i++;
             aux.print();
         }
     }
