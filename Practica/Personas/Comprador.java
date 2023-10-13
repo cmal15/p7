@@ -34,6 +34,32 @@ public class Comprador{
     protected Laptop getLaptops(int x){
         return laptops.get(x);
     }
+    protected PC getLaptops(int x){
+        return laptops.get(x);
+    }
+
+    protected PC getPcs(int x){
+        return pcs.get(x);
+    }
+    protected LinkedList<Smartphone> getSmartphones(){
+        return smartphones;
+    }
+
+    protected LinkedList<Tablet> getTablets(){
+        return tablets;
+    }
+
+    protected LinkedList<Television> getTelevisions(){
+        return televisiones;
+    }
+
+    protected LinkedList<Laptop> getLaptopss(){
+        return laptops;
+    }
+
+    protected LinkedList<PC> getPcss(){
+        return pcs;
+    }
 
     protected void addSmarthpone(Smartphone smart){
         smartphones.add(smart);
@@ -54,4 +80,6 @@ public class Comprador{
     protected void addPC(PC pc ){
         pcs.add(pc);
     }
+    public 
+
 }
