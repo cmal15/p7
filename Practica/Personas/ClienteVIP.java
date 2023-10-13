@@ -7,7 +7,7 @@ import java.util.LinkedList;
 
 public class ClienteVIP extends Comprador{
     public ClienteVIP(Comprador comprador){
-        super(comprador.getSmartphone(),comprador.getTablet(),comprador.getTelevision(),comprador.getLaptops(),comprador.getPcs())
+        super(comprador.getSmartphones(),comprador.getTablets(),comprador.getTelevisions(),comprador.getLaptopss(),comprador.getPcss())
     }
     public static Comprador iniciarVIP(){
         LinkedList<Smartphone> smartphones= new LinkedList<>();
