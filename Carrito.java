@@ -71,7 +71,24 @@ public class Carrito {
     public void print(){
         System.out.println("Smatphones");
         for(Smartphone aux : smartphones){
-            
+            aux.print();
         }
+        System.out.println("Tablets");
+        for(Tablet aux : tablets){
+            aux.print();
+        }
+        System.out.println("Televisiones");
+        for(Television aux : televisiones){
+            aux.print();
+        }
+        System.out.println("laptops");
+        for(Laptop aux : laptops){
+            aux.print();
+        }
+        System.out.println("pcs");
+        for(PC aux : pcs){
+            aux.print();
+        }
+        System.out.println("El totald el carrito es: "+ total);
     }
 }

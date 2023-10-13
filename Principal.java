@@ -117,12 +117,19 @@ public class Principal {
                     break;
                 case 3:
                     carrito.print();
+                    System.out.println("1.Confirmar pago\t2. Cancelar compra");
+                    op = sc.nextInt();
+                    if(op == 2){
+                        System.out.println("Hasta pronto");
+                        return;
+                    }
+                    System.out.println("Compra confirmada");
                     break;
             
                 default:
                     break;
             }
-        }while(op != 3);
+        }while(op != 4);
         sc.close();
     }
 
