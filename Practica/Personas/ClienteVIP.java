@@ -8,11 +8,6 @@ import java.util.LinkedList;
 public class ClienteVIP extends Comprador{
     public ClienteVIP(Comprador comprador){
         super(comprador.getSmartphone(),comprador.getTablet(),comprador.getTelevision(),comprador.getLaptops(),comprador.getPcs())
-        this.smartphones=smartphones;
-        this.tablets=tablets;
-        this.televisiones=televisiones;
-        this.laptops=laptops;
-        this.pcs=pcs;
     }
     public static Comprador iniciarVIP(){
         LinkedList<Smartphone> smartphones= new LinkedList<>();
