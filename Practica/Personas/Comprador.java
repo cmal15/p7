@@ -34,13 +34,11 @@ public class Comprador{
     protected Laptop getLaptops(int x){
         return laptops.get(x);
     }
-    protected PC getLaptops(int x){
-        return laptops.get(x);
-    }
 
     protected PC getPcs(int x){
         return pcs.get(x);
     }
+    
     protected LinkedList<Smartphone> getSmartphones(){
         return smartphones;
     }
@@ -80,6 +78,5 @@ public class Comprador{
     protected void addPC(PC pc ){
         pcs.add(pc);
     }
-    public 
 
 }
