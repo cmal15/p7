@@ -6,7 +6,7 @@ public class Celular extends DispositivoMovil{
     private String planDeDatos;
     //atributos
 
-    public Celular(int año, double precio, String marca, String modelo, int bateriaInterna,String companiaTelefonica,String planDeDatos){
+    public Celular(int año, double precio, String marca, String modelo, boolean bateriaInterna,String companiaTelefonica,String planDeDatos){
         super(año, precio, marca, modelo, bateriaInterna);
         this.companiaTelefonica=companiaTelefonica;
         this.planDeDatos=planDeDatos;

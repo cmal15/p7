@@ -5,11 +5,11 @@ import Dispositivos.DispositivosElectronicos.DispositivoElectronico;
 
 public class DispositivoMovil extends DispositivoElectronico{
 
-    private int bateriaInterna;
+    private boolean bateriaInterna;
     private String modelo;
     private String marca;
     
-    public DispositivoMovil(int año, double precio, String marca, String modelo, int bateriaInterna){
+    public DispositivoMovil(int año, double precio, String marca, String modelo, boolean bateriaInterna){
         super(año, precio);
         this.marca = marca;
         this.modelo = modelo;
@@ -24,7 +24,7 @@ public class DispositivoMovil extends DispositivoElectronico{
         System.out.println("Introduzca la modelo");
         modelo = sc.nextLine();
         System.out.println("Tiene bateria interna? (true/false)");
-        int bateriaInterna = sc.nextInt();
+        boolean bateriaInterna = sc.nextBoolean();
         return new DispositivoMovil(aux.getAño(), aux.getPrecio(), marca, modelo, bateriaInterna);
     }
 
@@ -36,7 +36,7 @@ public class DispositivoMovil extends DispositivoElectronico{
         this.modelo = modelo;
     }
 
-    protected void setBateriaInterna(int bateriaInterna){
+    protected void setBateriaInterna(boolean bateriaInterna){
         this.bateriaInterna = bateriaInterna;
     }
 
@@ -48,7 +48,7 @@ public class DispositivoMovil extends DispositivoElectronico{
         return modelo;
     }
 
-    protected int getBateriaInterna(){
+    protected boolean getBateriaInterna(){
         return bateriaInterna;
     }
 

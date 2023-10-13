@@ -13,7 +13,7 @@ public class ClienteVIP extends Comprador{
         LinkedList<Laptop> laptops= new LinkedList<>();
         LinkedList<PC> pcs= new LinkedList<>();
         Smartphone smartphone=new Smartphone(2023, 25000.0, "Apple", "Iphone", true, "T-mobile","ilimitado","Proteccion Max", "alta");
-        smartphones.add(smarthpone);
+        smartphones.add(smartphone);
         Tablet tablet=new Tablet(2023,30000.0,"Apple","Ipadpro",true,true)
         tablets.add(tablet);
         Television tele=new Television(2023, 50000.00,"pantallaPlana", 4000, "surround");
