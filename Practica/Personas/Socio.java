@@ -1,5 +1,10 @@
 package Personas;
 import java.util.Scanner;
+import Dispositivos.Computadoras.*;
+import Dispositivos.DispositivosElectronicos.*;
+import Dispositivos.DispositivosMoviles.*;
+import java.util.Scanner;
+import java.util.LinkedList;
 public class Socio extends Comprador{
     public Socio(Comprador comprador){
         super(comprador.getSmartphones(),comprador.getTablets(),comprador.getTelevisions(),comprador.getLaptopss(),comprador.getPcss())
