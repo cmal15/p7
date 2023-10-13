@@ -12,6 +12,7 @@ public class Carrito {
     public LinkedList<Television> televisiones;
     public LinkedList<Laptop> laptops;
     public LinkedList<PC> pcs;
+    public int total;
 
     public Carrito(){
         smartphones = new LinkedList<>();
@@ -19,6 +20,32 @@ public class Carrito {
         televisiones = new LinkedList<>();
         laptops = new LinkedList<>();
         pcs = new LinkedList<>();
+        total = 0;
+    }
+
+    public void addSmartphone(Smartphone s){
+        smartphones.add(s);
+        total += s.getPrecio();
+    }
+
+    public void addTablet(Tablet s){
+        tablets.add(s);
+        total += s.getPrecio();
+    }
+
+    public void addTelevision(Television s){
+        televisiones.add(s);
+        total += s.getPrecio();
+    }
+
+    public void addLaptop(Laptop s){
+        laptops.add(s);
+        total += s.getPrecio();
+    }
+
+    public void addPC(PC s){
+        pcs.add(s);
+        total += s.getPrecio();
     }
 
     public LinkedList<Smartphone> getSmartphones(){
@@ -39,5 +66,12 @@ public class Carrito {
 
     public LinkedList<PC> getPcs(){
         return pcs;
+    }
+
+    public void print(){
+        System.out.println("Smatphones");
+        for(Smartphone aux : smartphones){
+            
+        }
     }
 }

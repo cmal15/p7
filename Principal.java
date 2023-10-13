@@ -67,24 +67,24 @@ public class Principal {
                         case 1:
                             System.out.println("Introduzca el indice de la lista del producto deseado");
                             aux = sc.nextInt();
-                            if(aux < comprador.tablets.size()){
-                                carrito.getTablets().add(comprador.tablets.get(aux));
+                            if(aux < comprador.smartphones.size()){
+                                carrito.addSmartphone(comprador.smartphones.get(aux));
                                 System.out.println("Añadido al carrito");
                             }
                             break;
                         case 2:
                             System.out.println("Introduzca el indice de la lista del producto deseado");
                             aux = sc.nextInt();
-                            if(aux < comprador.televisiones.size()){
-                                carrito.getTelevisiones().add(comprador.televisiones.get(aux));
+                            if(aux < comprador.tablets.size()){
+                                carrito.addTablet(comprador.tablets.get(aux));
                                 System.out.println("Añadido al carrito");
                             }                            
                             break;
                             case 3:
                             System.out.println("Introduzca el indice de la lista del producto deseado");
                             aux = sc.nextInt();
-                            if(aux < comprador.smartphones.size()){
-                                carrito.getSmartphones().add(comprador.smartphones.get(aux));
+                            if(aux < comprador.televisiones.size()){
+                                carrito.addTelevision(comprador.televisiones.get(aux));
                                 System.out.println("Añadido al carrito");
                             }                            
                             
@@ -116,7 +116,7 @@ public class Principal {
                     imprimirProductos(comprador);
                     break;
                 case 3:
-                    
+                    carrito.print();
                     break;
             
                 default:
