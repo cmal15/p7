@@ -10,6 +10,7 @@ public class Principal {
 
     public static void main(String[] args) {
         int op;
+        Carrito carrito = new Carrito();
         ClienteVIP vip = null;
         Socio socio = null;
         Estudiante estudiante = null;
@@ -66,20 +67,44 @@ public class Principal {
                         case 1:
                             System.out.println("Introduzca el indice de la lista del producto deseado");
                             aux = sc.nextInt();
-                            if(aux < comprador.smartphones.size()){
-                                
+                            if(aux < comprador.tablets.size()){
+                                carrito.getTablets().add(comprador.tablets.get(aux));
+                                System.out.println("Añadido al carrito");
                             }
                             break;
                         case 2:
+                            System.out.println("Introduzca el indice de la lista del producto deseado");
+                            aux = sc.nextInt();
+                            if(aux < comprador.televisiones.size()){
+                                carrito.getTelevisiones().add(comprador.televisiones.get(aux));
+                                System.out.println("Añadido al carrito");
+                            }                            
+                            break;
+                            case 3:
+                            System.out.println("Introduzca el indice de la lista del producto deseado");
+                            aux = sc.nextInt();
+                            if(aux < comprador.smartphones.size()){
+                                carrito.getSmartphones().add(comprador.smartphones.get(aux));
+                                System.out.println("Añadido al carrito");
+                            }                            
                             
                             break;
-                        case 3:
+                            case 4:
+                            System.out.println("Introduzca el indice de la lista del producto deseado");
+                            aux = sc.nextInt();
+                            if(aux < comprador.laptops.size()){
+                                carrito.getLaptops().add(comprador.laptops.get(aux));
+                                System.out.println("Añadido al carrito");
+                            }                            
                             
                             break;
-                        case 4:
-                            
-                            break;
-                        case 5:
+                            case 5:
+                            System.out.println("Introduzca el indice de la lista del producto deseado");
+                            aux = sc.nextInt();
+                            if(aux < comprador.pcs.size()){
+                                carrito.getPcs().add(comprador.pcs.get(aux));
+                                System.out.println("Añadido al carrito");
+                            }                            
                             
                             break;
                     
@@ -88,7 +113,7 @@ public class Principal {
                     }
                     break;
                 case 2:
-                    
+                    imprimirProductos(comprador);
                     break;
                 case 3:
                     
@@ -101,7 +126,7 @@ public class Principal {
         sc.close();
     }
 
-    public void imprimirProductos(Comprador comprador){
+    public static void imprimirProductos(Comprador comprador){
         int i = 0;
         for (Smartphone aux : comprador.smartphones) {
             System.out.println("Producto "+ i++);
