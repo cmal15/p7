@@ -19,7 +19,7 @@ public class ClienteVIP extends Comprador{
         televisiones.add(tele);
         Laptop laptop=new Laptop(2023, 100000.0, "Macbook Pro", "Apple", 10, 500);
         laptops.add(laptop);
-        PC pc=ne PC(2023, 150000.0, "MacPro", "Apple", true);
+        PC pc=new PC(2023, 150000.0, "MacPro", "Apple", true);
         pcs.add(pc);
         super(smartphones,tablets,televisiones,laptops,pcs);
     }
